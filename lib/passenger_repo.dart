@@ -4,7 +4,6 @@ import 'package:contacts_service/contacts_service.dart';
 abstract class PassengerRepository {
   Future<void> getContacts();
   void populatePassengers(Iterable<Contact> contacts);
-  void updatePassenger(Passenger passenger, Passenger modifiedPassenger);
   List<Passenger> getPassengers();
 }
 
@@ -22,13 +21,6 @@ class PassengerRepo implements PassengerRepository {
     var _contacts = contacts.where((element) => element.displayName != null).toList();
     _contacts.sort((a, b) => a.displayName.compareTo(b.displayName));
     passengers = _contacts.map((contact) => Passenger(contact)).toList();
-  }
-
-  @override
-  void updatePassenger(Passenger passenger, Passenger modifiedPassenger) {
-    var index = passengers.indexOf(passenger);
-    passengers[index] = modifiedPassenger;
-    print('Repo: ${passengers[index]}');
   }
 
   @override
