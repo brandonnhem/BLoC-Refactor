@@ -1,5 +1,5 @@
 import 'package:addpassengers/blocs/blocs.dart';
-import 'package:addpassengers/models/Passenger.dart';
+import 'package:addpassengers/models/models.dart';
 import 'package:addpassengers/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

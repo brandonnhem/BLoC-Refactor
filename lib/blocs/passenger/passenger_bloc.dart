@@ -4,7 +4,7 @@ import 'package:addpassengers/passenger_repo.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-import 'package:addpassengers/models/Passenger.dart';
+import 'package:addpassengers/models/models.dart';
 import 'package:addpassengers/blocs/passenger/passenger.dart';
 
 class PassengerBloc extends Bloc<PassengerEvent, PassengerState> {
